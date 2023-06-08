@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
+  "customSyntax": "postcss-html",
+  "rules": {
+    "font-family-no-missing-generic-family-keyword": null,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null
+  }
+}

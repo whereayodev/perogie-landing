@@ -1,0 +1,22 @@
+// Screen sizes
+$screen-s-min: 600px;
+$screen-sm-min: 700px;
+$screen-md-min: 915px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 1200px;
+
+$color-dark: rgb(25 25 25 / 100%);
+$color-grey: rgb(66 66 66 / 100%);
+$color-dark-05: rgb(25 25 25 / 5%);
+$color-light-50: rgb(255 255 255 / 50%);
+$color-gradient: linear-gradient(
+  to bottom,
+  rgb(253 113 38 / 99.2%) 0%,
+  rgb(254 218 94 / 99.6%) 100%
+);
+$color-blue: rgb(153 213 237 / 100%);
+$color-semi-yellow: rgb(254 218 94 / 100%);
+$color-orange: rgb(253 141 38 / 100%);
+$color-yellow: rgb(255 249 97 / 100%);
+$color-white: rgb(255 255 255 / 100%);
+$color-white-blur: rgb(255 255 255 / 95%);

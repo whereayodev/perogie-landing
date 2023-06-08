@@ -1,0 +1,169 @@
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin bg-blur() {
+  backdrop-filter: blur(12.5px);
+}
+
+@mixin user-select-none {
+  user-select: none;
+}
+
+@mixin hide-scrollbar {
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin animate-quick($property, $duration: 0.3s) {
+  transition: $property $duration ease-in-out;
+}
+
+// Средне
+@mixin animate-medium($property, $duration: 0.5s) {
+  transition: $property $duration ease-in-out;
+}
+
+// Медленно
+@mixin animate-slow($property, $duration: 1s) {
+  transition: $property $duration ease-in-out;
+}
+
+// Fonts
+
+@mixin text-style-h1() {
+  font-size: 4.625rem;
+  font-family: 'Work Sans';
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  text-decoration: none;
+  text-transform: none;
+
+  @include sm {
+    font-size: 46px;
+  }
+}
+
+@mixin text-style-h2() {
+  font-size: 2.188rem;
+  font-family: 'Work Sans';
+  font-weight: 600;
+  font-style: normal;
+  line-height: 125%;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-h4() {
+  font-size: 1.562rem;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  font-style: normal;
+  line-height: 125%;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-h6() {
+  font-size: 1.125rem;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  font-style: normal;
+  line-height: 165%;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-button() {
+  font-size: 1rem;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin text-style-p() {
+  font-size: 1.125rem;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  font-style: normal;
+  line-height: 165%;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  text-transform: none;
+
+  @include sm {
+    font-size: 15px;
+  }
+}
+
+@mixin shadow-m() {
+  box-shadow: 0 0 15px rgb(25 25 25 / 5%);
+}
+
+@mixin border($top: false, $left: false, $right: false, $bottom: false, $all: false) {
+  @if $top {
+    border-top: 1px solid $color-dark-05;
+  }
+  @if $bottom {
+    border-bottom: 1px solid $color-dark-05;
+  }
+  @if $left {
+    border-left: 1px solid $color-dark-05;
+  }
+  @if $right {
+    border-right: 1px solid $color-dark-05;
+  }
+  @if $all {
+    border: 1px solid $color-dark-05;
+  }
+}
+
+@mixin gradient-text($gradient) {
+  background-clip: text;
+  text-fill-color: transparent;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
